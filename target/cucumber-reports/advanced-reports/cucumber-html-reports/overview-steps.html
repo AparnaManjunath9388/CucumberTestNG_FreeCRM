@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CucumberTestNG_FreeCRM</td>
+              <td>1</td>
+            <td>16 Jun 2020, 17:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">ContactsPageStepDef.new_contact_should_get_saved_successfully_and_come_up_when_searched_for_the_same()</td>
+              <td>1</td>
+              <td class="duration" data-value="1490345600">1.490</td>
+              <td class="duration" data-value="1490345600">1.490</td>
+              <td class="duration" data-value="1490345600">1.490</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ContactsPageStepDef.user_clicks_on_CONTACTS_New_Contact_enters_all_the_given_details_and_clicks_on_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="59339013900">59.339</td>
+              <td class="duration" data-value="59339013900">59.339</td>
+              <td class="duration" data-value="59339013900">59.339</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ContactsPageStepDef.user_has_already_logged_in_to_application_with_given_username_and_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="7698662000">7.698</td>
+              <td class="duration" data-value="7698662000">7.698</td>
+              <td class="duration" data-value="7698662000">7.698</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DealsPageStepDef.new_Deal_ID_is_generated_and_displayed_on_first_row()</td>
+              <td>1</td>
+              <td class="duration" data-value="87080800">0.087</td>
+              <td class="duration" data-value="87080800">0.087</td>
+              <td class="duration" data-value="87080800">0.087</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DealsPageStepDef.user_has_already_logged_in_to_application_with_given_username_and_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="8265642200">8.265</td>
+              <td class="duration" data-value="8265642200">8.265</td>
+              <td class="duration" data-value="8265642200">8.265</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">DealsPageStepDef.user_hovers_mouse_on_DEALS_link_and_clicks_on_New_Deal_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="6928726800">6.928</td>
+              <td class="duration" data-value="6928726800">6.928</td>
+              <td class="duration" data-value="6928726800">6.928</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.contact_search_should_display_the_added_user_s_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.logged_in_UserId_is_as_expected()</td>
+              <td>1</td>
+              <td class="duration" data-value="132603400">0.132</td>
+              <td class="duration" data-value="132603400">0.132</td>
+              <td class="duration" data-value="132603400">0.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.should_appear_under_CompanyName_column(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="77800">0.000</td>
+              <td class="duration" data-value="77800">0.000</td>
+              <td class="duration" data-value="77800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.the_box_should_be_added_in_the_specified_location_in_Home_Page()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.user_clicks_on_AddBox_link_and_adds_the_given_box_in_the_given_location()</td>
+              <td>1</td>
+              <td class="duration" data-value="41810177300">41.810</td>
+              <td class="duration" data-value="41810177300">41.810</td>
+              <td class="duration" data-value="41810177300">41.810</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.user_clicks_on_QuickCreate_link_and_adds_given_contact_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="7270737400">7.270</td>
+              <td class="duration" data-value="7270737400">7.270</td>
+              <td class="duration" data-value="7270737400">7.270</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.user_enters_in_Quick_search_box_selects_Search_target_as_and_clicks_on_Search(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2341599400">2.341</td>
+              <td class="duration" data-value="2341599400">2.341</td>
+              <td class="duration" data-value="2341599400">2.341</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDef.user_has_already_logged_in_to_application_with_given_username_and_password()</td>
+              <td>3</td>
+              <td class="duration" data-value="7753516300">7.753</td>
+              <td class="duration" data-value="7753516300">7.908</td>
+              <td class="duration" data-value="23260548900">23.260</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hook.setUp(Scenario)</td>
+              <td>9</td>
+              <td class="duration" data-value="34376829044">34.376</td>
+              <td class="duration" data-value="34376829044">1:54.295</td>
+              <td class="duration" data-value="309391461400">5:9.391</td>
+              <td class="failed">77.78%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hook.tearDown()</td>
+              <td>9</td>
+              <td class="duration" data-value="3978703133">3.978</td>
+              <td class="duration" data-value="3978703133">7.851</td>
+              <td class="duration" data-value="35808328200">35.808</td>
+              <td class="failed">77.78%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageStepDef.i_will_land_up_in_Home_Page_which_has_page_title(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageStepDef.title_of_Login_page_is(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="707422166">0.707</td>
+              <td class="duration" data-value="707422166">4.178</td>
+              <td class="duration" data-value="4244533000">4.244</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageStepDef.user_enters_Username_and_password_and_clicks_on_Login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageStepDef.user_enters_Username_which_is_unregistered(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="5335078100">5.335</td>
+              <td class="duration" data-value="5335078100">9.262</td>
+              <td class="duration" data-value="16005234300">16.005</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginPageStepDef.user_is_already_navigated_to_Free_CRM_Login_Page_and_Page_title_is(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>46</td>
+            <td class="duration">11.392</td>
+            <td class="duration">5:9.391</td>
+            <td class="duration">8:44.074</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="10" time="769.9376">
+<testcase classname="Free CRM Application Login feature - positive scenario" name="Login to application positive case" time="28.912773">
+<system-out><![CDATA[Given User is already navigated to Free CRM Login Page "https://classic.crmpro.com/" and Page title is "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+When User enters Username and password and clicks on Login button...........passed
+Then I will land up in Home Page which has page title "CRMPRO"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="Free CRM Application Login feature - positive scenario" name="Login to application negative case" time="23.095833">
+<system-out><![CDATA[Given Title of Login page is "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+When User enters Username "aparna12.rao" which is unregistered and clicks on Login button.passed
+Then User remains on Login Page and the title remains "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Free CRM Application Login feature - positive scenario" name="Login to application negative case 2" time="22.473925">
+<system-out><![CDATA[Given Title of Login page is "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+When User enters Username "aparna_m" which is unregistered and clicks on Login button.passed
+Then User remains on Login Page and the title remains "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Free CRM Application Login feature - positive scenario" name="Login to application negative case 3" time="22.616069">
+<system-out><![CDATA[Given Title of Login page is "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+When User enters Username "abc_cd" which is unregistered and clicks on Login button.passed
+Then User remains on Login Page and the title remains "CRMPRO - CRM software for customer relationship management, sales, and support.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Home Page features" name="Search in Home Page" time="26.373585">
+<system-out><![CDATA[Given User has already logged in to application with given username and password.passed
+And Logged in UserId is as expected.........................................passed
+When User enters "Google" in Quick search box, selects Search target as "CRM" and clicks on Search.passed
+Then "Google" should appear under CompanyName column........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Home Page features" name="Quick Contact create" time="81.002803">
+<system-out><![CDATA[Given User has already logged in to application with given username and password.passed
+When User clicks on QuickCreate link and adds given contact details.........passed
+Then Contact search should display the added users details..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Home Page features" name="Add Quick access box to Home Page" time="31.727091">
+<system-out><![CDATA[Given User has already logged in to application with given username and password.passed
+When User clicks on AddBox link and adds the given box in the given location.passed
+Then the box should be added in the specified location in Home Page.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Contacts Page features" name="Add new Contact" time="81.54287">
+<system-out><![CDATA[Given User is on Home Page..................................................passed
+When User clicks on CONTACTS -> New Contact, enters all the given details and clicks on Save.passed
+Then new contact should get saved successfully and come up when searched for the same.passed
+]]></system-out>
+</testcase>
+<testcase classname="Contacts Page features" name="Edit an existing contact" time="301.03052">
+<failure message="java.lang.AssertionError: expected [true] but found [false]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:94)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:513)&#13;&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:42)&#13;&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at com.crm.bdd.stepdefinitions.ContactsPageStepDef.all_the_new_changes_should_be_saved_successfully(ContactsPageStepDef.java:58)&#13;&#10;&#9;at ✽.Then all the new changes should be saved successfully(003_ContactsPage.feature:16)&#13;&#10;"><![CDATA[Given User is on Home Page..................................................passed
+When User searches for given existing contact and clicks on Edit button.....passed
+When User enters all the required details and clicks on Save................passed
+Then all the new changes should be saved successfully.......................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.crm.bdd.stepdefinitions.ContactsPageStepDef.all_the_new_changes_should_be_saved_successfully(ContactsPageStepDef.java:58)
+	at ✽.Then all the new changes should be saved successfully(003_ContactsPage.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="Free CRM Deal creation" name="Simple new deal creation" time="151.162131">
+<failure message="java.lang.AssertionError: expected [true] but found [false]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:94)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:513)&#13;&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:42)&#13;&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at com.crm.bdd.stepdefinitions.DealsPageStepDef.new_Deal_ID_is_generated_and_displayed_on_first_row(DealsPageStepDef.java:40)&#13;&#10;&#9;at ✽.Then New Deal ID is generated and displayed on first row(004_DealsPage.feature:10)&#13;&#10;"><![CDATA[Given User is on Home page after logging in.................................passed
+When User hovers mouse on DEALS link and clicks on New Deal link and enters new deal details and clicks on Save.passed
+Then New Deal ID is generated and displayed on first row....................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.crm.bdd.stepdefinitions.DealsPageStepDef.new_Deal_ID_is_generated_and_displayed_on_first_row(DealsPageStepDef.java:40)
+	at ✽.Then New Deal ID is generated and displayed on first row(004_DealsPage.feature:10)
+]]></failure>
+</testcase>
+</testsuite>

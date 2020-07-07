@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 528.214 s <<< FAILURE! - in TestSuite
+feature(com.crm.bdd.runners.RegressionTestRunner)  Time elapsed: 262.284 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+java.lang.Exception: Exception while setting up before scenario starts: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//classic.crmpro.com/&c=UTF-8&d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20classic.crmpro.com.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-JOPOHLMU', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 77.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200602222727, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3188, moz:profile: C:\Users\aparn\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d182b777-f8fd-4fd4-9fc1-42fe62629382
+	at com.crm.bdd.runners.RegressionTestRunner.feature(RegressionTestRunner.java:33)
+Caused by: java.lang.Exception: 
+Exception while setting up before scenario starts: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//classic.crmpro.com/&c=UTF-8&d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20classic.crmpro.com.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-JOPOHLMU', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 77.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200602222727, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 3188, moz:profile: C:\Users\aparn\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d182b777-f8fd-4fd4-9fc1-42fe62629382
+	at com.crm.bdd.runners.RegressionTestRunner.feature(RegressionTestRunner.java:33)
+
+feature(com.crm.bdd.runners.RegressionTestRunner)  Time elapsed: 138.858 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+java.lang.Exception: Exception from method clickOnWebElement: Element <input class="button" type="button"> is not clickable at point (1141,177) because another element <div id="ibox_overlay"> obscures it
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-JOPOHLMU', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 77.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200602222727, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 9584, moz:profile: C:\Users\aparn\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b606258-e788-4050-8ac2-78d2d6e5f646
+	at com.crm.bdd.runners.RegressionTestRunner.feature(RegressionTestRunner.java:33)
+Caused by: java.lang.Exception: 
+Exception from method clickOnWebElement: Element <input class="button" type="button"> is not clickable at point (1141,177) because another element <div id="ibox_overlay"> obscures it
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-JOPOHLMU', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 77.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200602222727, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 9584, moz:profile: C:\Users\aparn\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b606258-e788-4050-8ac2-78d2d6e5f646
+
+feature(com.crm.bdd.runners.RegressionTestRunner)  Time elapsed: 36.826 s  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.AssertionError: expected [true] but found [false]
+	at com.crm.bdd.runners.RegressionTestRunner.feature(RegressionTestRunner.java:33)
+Caused by: java.lang.AssertionError: expected [true] but found [false]
+
